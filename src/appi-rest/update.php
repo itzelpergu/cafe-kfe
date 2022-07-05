@@ -35,7 +35,8 @@ header("Content-Type: application/x-www-form-urlencoded");
   $db = new PDO($dns, $user, $pass);
   if($db){
      //$sql = " UPDATE platillo SET nombre='".$nombre."',precio='".$precio."',descripcion='".$descripcion."' WHERE id =".$id;
-     $sql="UPDATE platillo SET nombre='$nombre', precio='$precio',descripcion='$descripcion' WHERE id='$id'";
+     $sql="UPDATE platillo SET nombre='$nombre', precio='$precio',
+     descripcion='$descripcion' WHERE idplatillo ='$id'";
       $query = $db->prepare($sql);
       $query ->execute();
       if(!$query){

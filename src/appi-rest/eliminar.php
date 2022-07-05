@@ -8,9 +8,9 @@ header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
     $pass = "";
 
     $db = new PDO($dns, $user, $pass);
-// Extract, validate and sanitize the id.
-$id = ($_GET['id'] !== null && (int)$_GET['id'] > 0)? 
-mysqli_real_escape_string($con, (int)$_GET['id']) : false;
+// Extrae y valida el id.
+$id = ($_GET['idplatillo'] !== null && (int)$_GET['idplatillo'] > 0)? 
+mysqli_real_escape_string($con, (int)$_GET['idplatillo']) : false;
 
 if(!$id)
 {
@@ -18,7 +18,7 @@ if(!$id)
 }
 
 // Delete.
-$sql = "DELETE FROM `platillo` WHERE `id` ='{$id}' LIMIT 1";
+$sql = "DELETE FROM `platillo` WHERE `idplatillo` ='{$id}' LIMIT 1";
 
 if(mysqli_query($db, $sql))
 {

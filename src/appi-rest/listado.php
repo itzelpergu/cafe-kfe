@@ -30,5 +30,5 @@ try {
 		$registros .= "]";
 		echo $registros;
 } catch (Exception $e) {
-	echo "Erro: ". $e->getMessage();
+	echo "Error: ". $e->getMessage();
 };

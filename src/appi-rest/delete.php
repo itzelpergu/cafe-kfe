@@ -42,7 +42,7 @@ $db = new PDO($dns, $user, $pass);
 
     //$sql = " UPDATE platillo SET nombre='".$nombre."',precio='".$precio."',descripcion='".$descripcion."' WHERE id =".$id;
         
-        $sql = "DELETE FROM `platillo` WHERE `id` ='{$id}' LIMIT 1";
+        $sql = "DELETE FROM `platillo` WHERE `idplatillo` ='{$id}' LIMIT 1";
 
         //$sql= "DELETE FROM platillo where id = '$id'";
         

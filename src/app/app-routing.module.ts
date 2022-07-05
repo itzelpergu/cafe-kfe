@@ -13,7 +13,7 @@ const routes: Routes = [
   },
   {
     path: 'agregar',
-    loadChildren: './agregar/agregar.module#AgregarPageModule'
+    loadChildren: './agregar_platillo/agregar.module#AgregarPageModule'
   },
   {
     path: 'list',

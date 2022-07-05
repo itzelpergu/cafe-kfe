@@ -4,8 +4,8 @@ import { ProviderService } from 'src/providers/providerService';
 import {HttpClient} from '@angular/common/http';
 import { Router } from '@angular/router';
 import{ AlertController} from '@ionic/angular';
-import { text } from '@angular/core/src/render3';
-import { FormControl } from "@angular/forms";
+
+
 @Component({
   selector: 'app-list',
   templateUrl: 'list.page.html',
