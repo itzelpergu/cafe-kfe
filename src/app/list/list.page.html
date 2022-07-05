@@ -1,0 +1,50 @@
+<ion-header>
+<ion-toolbar color="primary">
+
+<!-- Menu -->
+  <ion-buttons slot="start">
+    <ion-menu-button></ion-menu-button>
+  </ion-buttons>
+
+ <div>
+  <ion-title>Listado</ion-title>
+ </div>
+  
+
+ <!-- panel de busqueda -->
+  <ion-searchbar  (ionInput)="getItems($event)" placeholder="Escriba el nombre del producto"></ion-searchbar>
+ 
+</ion-toolbar>
+
+</ion-header>
+
+<ion-content  class="background-image">
+
+   <ion-card>
+      <ion-list>
+      <ion-item *ngFor="let pr of productos">
+        
+        <ion-label>
+        <h3>{{pr.nombre}}</h3>
+        </ion-label>
+
+        <ion-label>
+        <p>${{pr.precio}}</p>
+        </ion-label>
+
+        <ion-button color="tertiary" >
+          <div>
+            <ion-icon name="create" slot="start" (click)="editarPlatillo(pr)"></ion-icon><br>
+          </div>
+        </ion-button>
+       
+        <ion-button color="danger">
+          <div>
+          <ion-icon name="trash" slot="start" method="GET" (click)="eliminar(pr)"></ion-icon><br>
+          </div>
+        </ion-button>
+
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>

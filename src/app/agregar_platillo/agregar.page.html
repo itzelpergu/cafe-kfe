@@ -1,0 +1,42 @@
+<ion-header>
+
+  <ion-toolbar color="primary">
+
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>
+      Agregar
+    </ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="background-image">
+
+ <ion-card class="welcome-card">
+  <ion-item>
+      <ion-label position="stacked">Nombre</ion-label>
+      <ion-input type="text"  [(ngModel)]="nombre" placeholder="Cafe"></ion-input>
+     
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Precio</ion-label>
+        <ion-input type="text" [(ngModel)]="precio"  placeholder="100"></ion-input>
+        
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Descripcion</ion-label>
+        <ion-textarea type="test" [(ngModel)]="descripcion" ></ion-textarea>
+        
+      </ion-item>
+   
+  <ion-button expand="block"  type="submit" (click)="agregar()" >Guardar</ion-button>
+</ion-card>
+    
+</ion-content>
+
