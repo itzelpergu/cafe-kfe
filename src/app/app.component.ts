@@ -9,6 +9,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   templateUrl: 'app.component.html'
 })
 export class AppComponent {
+
+  //constructor de las opciones del menu
   public appPages = [
     {
       title: 'Inicio',
@@ -19,6 +21,11 @@ export class AppComponent {
       title: 'Agregar',
       url: '/agregar',
       icon: 'create'
+    },
+    {
+      title: 'Bebidas',
+      url: '/listbebida',
+      icon: 'List'
     },
     {
       title: 'Productos',

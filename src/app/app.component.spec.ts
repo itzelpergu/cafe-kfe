@@ -52,7 +52,8 @@ describe('AppComponent', () => {
     expect(menuItems.length).toEqual(2);
     expect(menuItems[0].textContent).toContain('Inicio');
     expect(menuItems[1].textContent).toContain('Agregar');
-    expect(menuItems[2].textContent).toContain('List');
+    expect(menuItems[2].textContent).toContain('Listbebida');
+    expect(menuItems[3].textContent).toContain('List');
   });
 
   it('should have urls', async () => {
@@ -62,8 +63,9 @@ describe('AppComponent', () => {
     const menuItems = app.querySelectorAll('ion-item');
     expect(menuItems.length).toEqual(2);
     expect(menuItems[0].getAttribute('ng-reflect-router-link')).toEqual('/home');
-    expect(menuItems[0].getAttribute('ng-reflect-router-link')).toEqual('/agregar');
-    expect(menuItems[2].getAttribute('ng-reflect-router-link')).toEqual('/list');
+    expect(menuItems[1].getAttribute('ng-reflect-router-link')).toEqual('/agregar');
+    expect(menuItems[2].getAttribute('ng-reflect-router-link')).toEqual('/listbebida');
+    expect(menuItems[3].getAttribute('ng-reflect-router-link')).toEqual('/list');
   });
 
 });

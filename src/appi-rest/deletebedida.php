@@ -1,17 +1,16 @@
 <?php
 
 header("Access-Control-Allow-Origin: *");
-//header('Content-Type: text/html; charset=utf-8');
-//header('Access-Control-Allow-Origin: *');
 header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method");
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
 header("Content-Type: application/x-www-form-urlencoded");
 
 
-    //PARAMETROS DE LA BASE DE DATOS 
-    $dns = "mysql:host=localhost;dbname=restaurant";
-    $user = "root";
-    $pass = "";
+//PARAMETROS DE LA BASE DE DATOS 
+$dns = "mysql:host=localhost;dbname=restaurant";
+$user = "root";
+$pass = "";
+
 //RECUPERAR DATOS DEL FORMULARIO
 $data = file_get_contents("php://input");
 $objData = json_decode($data);
@@ -40,9 +39,9 @@ $descripcion = $objData->descripcion;
 $db = new PDO($dns, $user, $pass);
     if($db){
 
-    //$sql = " UPDATE platillo SET nombre='".$nombre."',precio='".$precio."',descripcion='".$descripcion."' WHERE id =".$id;
+  
         
-        $sql = "DELETE FROM `platillo` WHERE `id` ='{$id}' LIMIT 1";
+        $sql = "DELETE FROM `bebida` WHERE `idbebida` ='{$id}' LIMIT 1";
 
         //$sql= "DELETE FROM platillo where id = '$id'";
         

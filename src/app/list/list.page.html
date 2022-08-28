@@ -14,6 +14,12 @@
  <!-- panel de busqueda -->
   <ion-searchbar  (ionInput)="getItems($event)" placeholder="Escriba el nombre del producto"></ion-searchbar>
  
+  <ion-button color="light"  >
+    <div>
+      <ion-icon name="add"  method="GET" (click)="agregar()"></ion-icon><br>
+      </div>
+  </ion-button>
+
 </ion-toolbar>
 
 </ion-header>
@@ -21,8 +27,8 @@
 <ion-content  class="background-image">
 
    <ion-card>
-      <ion-list>
-      <ion-item *ngFor="let pr of productos">
+      <ion-list >
+      <ion-item *ngFor="let pr of productos"  >
         
         <ion-label>
         <h3>{{pr.nombre}}</h3>

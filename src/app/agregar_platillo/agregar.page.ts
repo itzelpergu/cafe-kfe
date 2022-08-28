@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController, NavParams, AlertController } from '@ionic/angular';
-import {HttpClient} from '@angular/common/http';
+//import { NavController, NavParams, AlertController } from '@ionic/angular';
+//import {HttpClient} from '@angular/common/http';
 import { Router } from '@angular/router';
 import { ProviderService } from 'src/providers/providerService';
 
@@ -28,15 +28,13 @@ export class AgregarPage  {
   agregar(){
     console.log(this.nombre);
     this.service.registrarDatos
-    ({nombre:this.nombre,precio:this.precio,descripcion:this.descripcion})
-    .subscribe(data=>{
+    ({nombre:this.nombre, precio:this.precio, descripcion:this.descripcion}).subscribe(data=>{
 
       //Realiza el reset despues de agregar los datos
       this.nombre ="";
       this.precio="";
       this.descripcion="";
-
-          console.log(data);
+      console.log(data);
           
           
     },

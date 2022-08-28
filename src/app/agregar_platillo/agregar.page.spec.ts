@@ -11,8 +11,8 @@ describe('AgregarPage', () => {
     TestBed.configureTestingModule({
       declarations: [ AgregarPage ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-    })
-      .compileComponents();
+    }).compileComponents();
+    
   }));
 
   beforeEach(() => {

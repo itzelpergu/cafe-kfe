@@ -16,6 +16,10 @@ const routes: Routes = [
     loadChildren: './agregar_platillo/agregar.module#AgregarPageModule'
   },
   {
+    path: 'listbebida',
+    loadChildren: './listbebida/listbebida.module#ListbebidaPageModule'
+  },
+  {
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
   }
